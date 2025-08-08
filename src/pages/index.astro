@@ -1,11 +1,325 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Bruin Strategy Network - UCLA's Premier Consulting Group">
+	<!-- Hero Section -->
+	<section class="relative h-screen flex items-center justify-center overflow-hidden">
+		<!-- Background Video -->
+		<video 
+			id="hero-video"
+			class="absolute top-0 left-0 w-full h-full object-cover"
+			autoplay 
+			muted 
+			loop 
+			playsinline
+			poster="/BSN_group_alc.JPG"
+			preload="metadata"
+			style="z-index: 1;"
+		>
+			<source src="/UCLA_royce.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		
+		<!-- Fallback Background (only shows if video fails) -->
+		<div class="absolute inset-0 bg-gradient-to-r from-bsn-navy to-bsn-dark-navy" style="z-index: 0;"></div>
+		
+		<!-- Dark blue overlay for video -->
+		<div class="absolute inset-0 bg-bsn-dark-navy/80" style="z-index: 2;"></div>
+		
+		<!-- Hero Content -->
+		<div class="relative text-center text-white px-4 sm:px-6 lg:px-8" style="z-index: 10;">
+			<h1 id="hero-title" class="text-6xl sm:text-7xl lg:text-8xl font-normal font-display mb-8 leading-none">
+				<span class="hero-word hero-word-1" style="display: inline-block;">Bruin</span>
+				<span class="hero-word hero-word-2" style="display: inline-block; margin-left: 0.25em;">Strategy</span>
+				<span class="hero-word hero-word-3" style="display: inline-block; margin-left: 0.25em;">Network</span>
+			</h1>
+			<p id="hero-subtitle" class="text-xl sm:text-2xl lg:text-3xl font-normal font-sans tracking-wide">
+				UCLA's Premier Consulting Group
+			</p>
+		</div>
+		
+		<!-- Scroll Indicator -->
+		<div id="scroll-indicator" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-0" style="z-index: 10;">
+			<div class="animate-pulse">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission + Who We Are Section -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<!-- Image -->
+				<div class="order-2 lg:order-1">
+					<div class="relative overflow-hidden rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500">
+						<img 
+							src="/BSN_group_alc.JPG" 
+							alt="BSN Team Photo" 
+							loading="lazy"
+							decoding="async"
+							class="w-full h-auto object-cover filter brightness-110"
+						>
+					</div>
+				</div>
+				
+				<!-- Content -->
+				<div class="order-1 lg:order-2 space-y-8">
+					<div>
+						<h2 class="text-4xl lg:text-5xl font-normal text-bsn-navy font-display mb-6 leading-tight">
+							Who We Are
+						</h2>
+						<p class="text-xl text-gray-700 leading-relaxed mb-6">
+							We are a student-led consulting organization at UCLA offering tracks in both management and healthcare. With backgrounds in fields like bioengineering, public health, economics, and computer science, our teams bring a thoughtful, cross-disciplinary approach to solving real business challenges. We combine hands-on experience, structured training, and close mentorship to deliver practical, tailored insights to clients — and meaningful growth for our members.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Where We Go Section -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl lg:text-5xl font-normal text-bsn-navy font-display mb-6 leading-tight">
+					Where We Go
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Our alumni have secured positions at top consulting firms, Fortune 500 companies, and leading organizations across industries
+				</p>
+			</div>
+			
+			<!-- Company Logos Grid -->
+			<div class="space-y-12">
+				<!-- Row 1: MBB + Top Consulting -->
+				<div class="flex justify-center items-center space-x-20">
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/mckinsey.png" alt="McKinsey & Company" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/companies/Bain.png" alt="Bain & Company" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/companies/BCG.png" alt="Boston Consulting Group" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+				</div>
+				
+				<!-- Row 2: Big Tech + Finance -->
+				<div class="flex justify-center items-center space-x-20">
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/companies/microsoft.png" alt="Microsoft" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/companies/goldman sachs.png" alt="Goldman Sachs" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-40 h-12 flex items-center justify-center ">
+						<img src="/companies/deloitte.png" alt="Deloitte" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our Consulting Tracks Section -->
+	<section class="py-20 bg-gray-50 relative">
+		<!-- Background -->
+		<div class="absolute inset-0">
+			<div class="absolute inset-0 bg-bsn-dark-navy/85"></div>
+		</div>
+		
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl lg:text-5xl font-normal text-white font-display mb-6 leading-tight">
+					Our Consulting Tracks
+				</h2>
+				<p class="text-xl text-gray-200 max-w-3xl mx-auto">
+					We currently offer membership in 2 different tracks: Management Consulting and Healthcare Consulting.
+				</p>
+			</div>
+			
+			<!-- Tracks Grid -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<!-- Management Track -->
+				<div class="bg-white rounded-xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
+					<div class="text-center">
+						<div class="w-16 h-16 bg-bsn-navy rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-normal text-bsn-navy font-display mb-4">Management Consulting</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Develop expertise in strategy, operations, and business transformation. Work with clients across industries to solve complex business challenges and drive growth.
+						</p>
+					</div>
+				</div>
+				
+				<!-- Health Track -->
+				<div class="bg-white rounded-xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
+					<div class="text-center">
+						<div class="w-16 h-16 bg-bsn-navy rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-normal text-bsn-navy font-display mb-4">Health Consulting</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Specialize in healthcare strategy, policy, and operations. Partner with hospitals, health systems, and healthcare organizations to improve patient outcomes and operational efficiency.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Join the Team Banner -->
+	<section class="py-20 relative overflow-hidden">
+		<!-- Background Image -->
+		<div class="absolute inset-0">
+			<img 
+				src="/BSN_exec.jpeg" 
+				alt="BSN Team" 
+				loading="lazy"
+				decoding="async"
+				class="w-full h-full object-cover"
+			>
+			<div class="absolute inset-0 bg-bsn-dark-navy/90"></div>
+		</div>
+		
+		<!-- Content -->
+		<div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+			<h2 class="text-4xl lg:text-6xl font-normal text-white font-display mb-8 leading-tight">
+				Join Our Team
+			</h2>
+			<p class="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+				Interested in consulting, business, or healthcare? Apply to join our team in the next recruitment cycle during the fall or winter
+			</p>
+			<a 
+				href="/students"
+				class="inline-block bg-white text-bsn-navy px-12 py-4 rounded-lg text-xl font-bold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl"
+			>
+				JOIN US
+			</a>
+		</div>
+	</section>
+
+	<!-- CSS Animations as Fallback -->
+	<style>
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		@keyframes fadeInUpSubtle {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		@keyframes bounce {
+			0%, 100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(10px);
+			}
+		}
+		
+		.hero-word-1 {
+			animation: fadeInUp 0.8s ease-out 0.5s both;
+		}
+		
+		.hero-word-2 {
+			animation: fadeInUp 0.8s ease-out 0.7s both;
+		}
+		
+		.hero-word-3 {
+			animation: fadeInUp 0.8s ease-out 0.9s both;
+		}
+		
+		#hero-subtitle {
+			animation: fadeInUpSubtle 1s ease-out 1.2s both;
+		}
+		
+		#scroll-indicator {
+			animation: fadeInUpSubtle 0.8s ease-out 2s both, bounce 1.5s ease-in-out 3s infinite;
+		}
+		
+		/* Initially hide elements for CSS animation */
+		.hero-word, #hero-subtitle, #scroll-indicator {
+			opacity: 0;
+		}
+	</style>
+
+	<!-- Enhanced Animations -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			console.log('Page loaded, checking for GSAP...');
+			console.log('GSAP available:', typeof gsap !== 'undefined');
+			
+			// Set video playback speed to 0.7x for cinematic effect
+			const video = document.getElementById('hero-video');
+			if (video) {
+				video.playbackRate = 0.7;
+				console.log('Video playback rate set to 0.7x');
+			}
+			
+			// Enhanced animations if GSAP is available
+			if (typeof gsap !== 'undefined') {
+				console.log('Using GSAP for enhanced animations');
+				
+				// Override CSS animations with GSAP
+				gsap.set(".hero-word, #hero-subtitle, #scroll-indicator", { opacity: 0 });
+				
+				const tl = gsap.timeline({ delay: 0.3 });
+				
+				tl.to(".hero-word", {
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					stagger: 0.2,
+					ease: "power2.out"
+				})
+				.to("#hero-subtitle", {
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					ease: "power2.out"
+				}, "-=0.3")
+				.to("#scroll-indicator", {
+					opacity: 1,
+					duration: 0.8,
+					ease: "power2.out"
+				}, "-=0.5");
+				
+				// Floating scroll indicator
+				gsap.to("#scroll-indicator", {
+					y: 10,
+					duration: 1.5,
+					repeat: -1,
+					yoyo: true,
+					ease: "sine.inOut",
+					delay: 2
+				});
+			} else {
+				console.log('GSAP not available, using CSS animations');
+				// CSS animations will handle everything automatically
+			}
+		});
+	</script>
 </Layout>
