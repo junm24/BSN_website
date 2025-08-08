@@ -1,12 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
+
+// Consultant data - all the consultants from the folder
+const consultants = [
+	"Aaron Knibbe", "Abigail Hsu", "Ahmad Ismail", "Ajeeth Iyer", "Akash Kura", "Akshay Gajjar", 
+	"Alain Izawa", "Alex Munzon", "Allyson Kang", "Amber Yu", "Anna Li", "Anya Modi", 
+	"Aravinth Ruppa", "Archi Patel", "Arnav Kalapala", "Au Vo", "Balin Patel", "Benjamin Kane", 
+	"Brittany Ishida", "Chidera Okonkwo", "Christian Byun", "Claire Li", "Diya Muchhala", "Eden Tan", 
+	"Haley Lee", "Hetvi Trivedi", "Jaewook Cho", "Joah Lee", "Jodi Chung", "Jonathan Chen", 
+	"Junho Suh", "Kaili Tam", "Khush Parikh", "Khushi Patel", "Kyle Hardnett", "Maimuna Chowdhury", 
+	"Mark Lin", "Maxwell Rubenstein", "Nalin Jayaswal", "Nishil Gandhi", "Noah Cylich", "Palak Parikh", 
+	"Paul Antoine Joly", "Richa Thakre", "Ryan Chao", "Samantha Fong", "Sarah Ben Makhlouf", "Sarah Wang", 
+	"Saumil Sharma", "Shaurya Jain", "Shreya Lakkaraju", "Simran Chainani", "Sophie Tan", "Sreeja Polkampally", 
+	"Srinidhi Sampath", "Sydney Dang", "Tatiana Strauss", "Trinabh Khera Sahni", "Vlad Plyushchenko", 
+	"William Siyuan Li", "Zachary Pelikh", "Zoe Shin"
+].map(name => ({
+	name,
+	image: name.replace(/\s+/g, '')
+}));
 ---
 
 <Layout title="Our Team - Bruin Strategy Network" description="Meet the executive team leading BSN at UCLA">
 	<section class="relative py-40 overflow-hidden">
 		<!-- Background Image -->
 		<div class="absolute inset-0">
-			<img src="/BSN_group_alc.JPG" alt="BSN Executive Team" class="w-full h-full object-cover">
+			<img src={`${baseUrl}BSN_group_alc.JPG`} alt="BSN Executive Team" class="w-full h-full object-cover">
 			<!-- Dark blue overlay for text readability -->
 			<div class="absolute inset-0 bg-bsn-dark-navy/65"></div>
 		</div>
@@ -21,7 +41,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="py-20 relative overflow-hidden">
 		<!-- Parallax Background -->
-		<div class="absolute inset-0 parallax-bg" style="background-image: url('/ourteambg1.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;"></div>
+		<div class="absolute inset-0 parallax-bg" style={`background-image: url('${baseUrl}ourteambg1.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;`}></div>
 		<!-- Dark overlay for text readability -->
 		<div class="absolute inset-0 bg-bsn-dark-navy/85"></div>
 
@@ -38,7 +58,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="team-card group cursor-pointer">
 					<!-- Avatar with Overlay -->
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/Aarushi.png" alt="Aarushi Maheshwari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/Aarushi.png`} alt="Aarushi Maheshwari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<!-- Gradient Overlay -->
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<!-- LinkedIn Icon -->
@@ -69,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Aashi Jhawer -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/Aashi.png" alt="Aashi Jhawer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/Aashi.png`} alt="Aashi Jhawer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/aashi-jhawer/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
@@ -96,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Archi Patel -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/archi.png" alt="Archi Patel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/archi.png`} alt="Archi Patel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/archi-patel-69b8b0167/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
@@ -123,7 +143,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Emily Zhao -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/Emily.png" alt="Emily Zhao" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/Emily.png`} alt="Emily Zhao" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/emilyzhao-/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
@@ -150,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Harry Hu -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/Harry.png" alt="Harry Hu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/Harry.png`} alt="Harry Hu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/harry-y-hu-/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
@@ -177,7 +197,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Hetvi Trivedi -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src="/headshots/hetvi.png" alt="Hetvi Trivedi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<img src={`${baseUrl}headshots/hetvi.png`} alt="Hetvi Trivedi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/hetvi-trivedi2026/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
@@ -201,9 +221,52 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 
-				<!-- Additional team members can be added here following the same pattern -->
-				<!-- Remaining executive board members would go here -->
-				
+			</div>
+		</div>
+	</section>
+
+	<!-- Consultants Section -->
+	<section class="py-20 bg-white relative overflow-hidden">
+		<!-- Background Pattern -->
+		<div class="absolute inset-0" style={`background-image: url('${baseUrl}ourteambg2.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;`}></div>
+		<div class="absolute inset-0 bg-white/90"></div>
+
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl lg:text-5xl font-bold text-bsn-navy font-display mb-6">
+					Our Consultants
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Meet our talented consultants who drive innovation and deliver exceptional results for our clients
+				</p>
+			</div>
+
+			<!-- Consultants Grid -->
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 consultant-grid">
+				{consultants.map((consultant) => (
+					<div class="consultant-card group cursor-pointer">
+						<!-- Avatar -->
+						<div class="relative overflow-hidden rounded-2xl aspect-square mb-3">
+							<img 
+								src={`${baseUrl}consultants/${consultant.image}.png`} 
+								alt={consultant.name} 
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+							/>
+							<!-- Gradient Overlay -->
+							<div class="absolute inset-0 bg-gradient-to-t from-bsn-navy/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							<!-- Name Overlay -->
+							<div class="absolute bottom-0 left-0 right-0 p-2 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+								<p class="text-xs font-medium text-center leading-tight">{consultant.name}</p>
+							</div>
+						</div>
+						<!-- Name (visible on desktop) -->
+						<div class="text-center hidden lg:block">
+							<h3 class="text-sm font-medium text-bsn-navy group-hover:text-bsn-blue transition-colors duration-200">
+								{consultant.name}
+							</h3>
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	</section>

@@ -97,29 +97,93 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 			
 			<!-- Company Logos Grid -->
 			<div class="space-y-12">
-				<!-- Row 1: MBB + Top Consulting -->
+				<!-- Row 1: MBB (Big 3 Consulting) -->
 				<div class="flex justify-center items-center space-x-20">
-					<div class="w-40 h-12 flex items-center justify-center ">
-						<img src={`${baseUrl}mckinsey.png`} alt="McKinsey & Company" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					<div class="w-40 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/mckinsey.png`} alt="McKinsey & Company" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
-					<div class="w-40 h-12 flex items-center justify-center ">
+					<div class="w-40 h-12 flex items-center justify-center">
 						<img src={`${baseUrl}companies/Bain.png`} alt="Bain & Company" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
-					<div class="w-40 h-12 flex items-center justify-center ">
+					<div class="w-40 h-12 flex items-center justify-center">
 						<img src={`${baseUrl}companies/BCG.png`} alt="Boston Consulting Group" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
 				</div>
 				
-				<!-- Row 2: Big Tech + Finance -->
+				<!-- Row 2: Top Tier Consulting -->
+				<div class="flex justify-center items-center space-x-16">
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/deloitte.png`} alt="Deloitte" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/accenture.png`} alt="Accenture" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/ey-parthenon.png`} alt="EY-Parthenon" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/PWC.png`} alt="PwC" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/kearney.png`} alt="Kearney" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+				</div>
+				
+				<!-- Row 3: Boutique Consulting -->
+				<div class="flex justify-center items-center space-x-16">
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/oliver wyman.png`} alt="Oliver Wyman" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/L.E.K.png`} alt="L.E.K. Consulting" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/FTI.png`} alt="FTI Consulting" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/ZS.png`} alt="ZS Associates" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/avasant.png`} alt="Avasant" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+				</div>
+				
+				<!-- Row 4: Big Tech -->
 				<div class="flex justify-center items-center space-x-20">
-					<div class="w-40 h-12 flex items-center justify-center ">
+					<div class="w-40 h-12 flex items-center justify-center">
 						<img src={`${baseUrl}companies/microsoft.png`} alt="Microsoft" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
-					<div class="w-40 h-12 flex items-center justify-center ">
-						<img src={`${baseUrl}companies/goldman sachs.png`} alt="Goldman Sachs" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					<div class="w-40 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/disney.png`} alt="Disney" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
-					<div class="w-40 h-12 flex items-center justify-center ">
-						<img src={`${baseUrl}companies/deloitte.png`} alt="Deloitte" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+				</div>
+				
+				<!-- Row 5: Financial Services -->
+				<div class="flex justify-center items-center space-x-16">
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/goldman sachs.png`} alt="Goldman Sachs" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/bank of america.png`} alt="Bank of America" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/capital one.png`} alt="Capital One" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/citi.png`} alt="Citigroup" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-32 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/discover.png`} alt="Discover" class="max-h-12 max-w-32 w-auto h-auto object-contain" loading="lazy">
+					</div>
+				</div>
+				
+				<!-- Row 6: Payment & Healthcare -->
+				<div class="flex justify-center items-center space-x-20">
+					<div class="w-40 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/mastercard.png`} alt="Mastercard" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
+					</div>
+					<div class="w-40 h-12 flex items-center justify-center">
+						<img src={`${baseUrl}companies/kaiser.png`} alt="Kaiser Permanente" class="max-h-12 max-w-40 w-auto h-auto object-contain" loading="lazy">
 					</div>
 				</div>
 			</div>
