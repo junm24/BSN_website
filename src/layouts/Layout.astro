@@ -1,15 +1,17 @@
 ---
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 const siteData = {
 	"name": "Bruin Strategy Network",
 	"tagline": "UCLA's Premier Consulting Group",
 	"navigation": [
-		{ "name": "Home", "href": "/", "mobile": true },
-		{ "name": "Team", "href": "/team", "mobile": true },
-		{ "name": "Students", "href": "/students", "mobile": true },
-		{ "name": "Clients", "href": "/clients", "mobile": true },
-		{ "name": "FAQs", "href": "/faq", "mobile": true }
+		{ "name": "Home", "href": `${baseUrl}`, "mobile": true },
+		{ "name": "Team", "href": `${baseUrl}team/`, "mobile": true },
+		{ "name": "Students", "href": `${baseUrl}students/`, "mobile": true },
+		{ "name": "Clients", "href": `${baseUrl}clients/`, "mobile": true },
+		{ "name": "FAQs", "href": `${baseUrl}faq/`, "mobile": true }
 	],
-	"cta": { "text": "JOIN US", "href": "/students" },
+	"cta": { "text": "JOIN US", "href": `${baseUrl}students/` },
 	"social": {
 		"instagram": "https://instagram.com/bruinstrategy",
 		"linkedin": "https://linkedin.com/company/bruin-strategy"
@@ -30,7 +32,7 @@ const { title = siteData.name, description = `${siteData.tagline} - Professional
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
@@ -52,8 +54,8 @@ const { title = siteData.name, description = `${siteData.tagline} - Professional
 				<div class="flex justify-between items-center h-16">
 					<!-- Logo -->
 					<div class="flex-shrink-0">
-						<a href="/" class="flex items-center logo-link">
-							<img src="/bsn logo.png" alt="BSN Logo" class="h-10 w-auto transition-transform duration-300 hover:scale-105">
+						<a href={`${baseUrl}`} class="flex items-center logo-link">
+							<img src={`${baseUrl}bsn logo.png`} alt="BSN Logo" class="h-10 w-auto transition-transform duration-300 hover:scale-105">
 						</a>
 					</div>
 					
@@ -152,7 +154,7 @@ const { title = siteData.name, description = `${siteData.tagline} - Professional
 					<!-- Logo & Social -->
 					<div class="flex flex-col space-y-4">
 						<div class="inline-block">
-							<img src="/Whitelogo.png" alt="BSN Logo" class="h-16 w-auto object-contain" style="display: block; max-width: none; height: 4rem; width: auto;">
+							<img src={`${baseUrl}Whitelogo.png`} alt="BSN Logo" class="h-16 w-auto object-contain" style="display: block; max-width: none; height: 4rem; width: auto;">
 						</div>
 						<div class="flex space-x-4">
 							<a 
