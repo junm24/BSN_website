@@ -3,23 +3,43 @@ import Layout from '../layouts/Layout.astro';
 
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 
-// Consultant data - all the consultants from the folder
-const consultants = [
-	"Aaron Knibbe", "Abigail Hsu", "Ahmad Ismail", "Ajeeth Iyer", "Akash Kura", "Akshay Gajjar", 
-	"Alain Izawa", "Alex Munzon", "Allyson Kang", "Amber Yu", "Anna Li", "Anya Modi", 
-	"Aravinth Ruppa", "Archi Patel", "Arnav Kalapala", "Au Vo", "Balin Patel", "Benjamin Kane", 
-	"Brittany Ishida", "Chidera Okonkwo", "Christian Byun", "Claire Li", "Diya Muchhala", "Eden Tan", 
-	"Haley Lee", "Hetvi Trivedi", "Jaewook Cho", "Joah Lee", "Jodi Chung", "Jonathan Chen", 
-	"Junho Suh", "Kaili Tam", "Khush Parikh", "Khushi Patel", "Kyle Hardnett", "Maimuna Chowdhury", 
-	"Mark Lin", "Maxwell Rubenstein", "Nalin Jayaswal", "Nishil Gandhi", "Noah Cylich", "Palak Parikh", 
-	"Paul Antoine Joly", "Richa Thakre", "Ryan Chao", "Samantha Fong", "Sarah Ben Makhlouf", "Sarah Wang", 
-	"Saumil Sharma", "Shaurya Jain", "Shreya Lakkaraju", "Simran Chainani", "Sophie Tan", "Sreeja Polkampally", 
-	"Srinidhi Sampath", "Sydney Dang", "Tatiana Strauss", "Trinabh Khera Sahni", "Vlad Plyushchenko", 
-	"William Siyuan Li", "Zachary Pelikh", "Zoe Shin"
-].map(name => ({
-	name,
-	image: name.replace(/\s+/g, '')
-}));
+// Consultant data organized by cohort
+const consultantCohorts = [
+	{
+		cohort: "2022 Fall - Kappa",
+		management: [
+			{ name: "Tatiana Strauss", year: "2025", major: "Behavioral Economics, Strategic Management, and Organizational Effectiveness", linkedin: "https://www.linkedin.com/in/tatianastrauss/", image: "TatianaStrauSS" },
+			{ name: "Benjamin Kane", year: "2025", major: "Business Economics, Accounting", linkedin: "https://www.linkedin.com/in/ben-kane10/", image: "BenjaminKane" },
+			{ name: "Chidera Okonkwo", year: "2026", major: "Chemical Engineering, Data Science Minor", linkedin: "https://www.linkedin.com/in/chidera-okonkwo/", image: "ChideraOkonkwo" },
+			{ name: "Khushi Patel", year: "2026", major: "Civil Engineering, Entrepreneurship Minor", linkedin: "https://www.linkedin.com/in/khushipatel22/", image: "KhushiPatel" },
+			{ name: "Sophie Tan", year: "2025", major: "History and Business Economics", linkedin: "https://www.linkedin.com/in/sophie-tan-042714233/", image: "SophieTan" }
+		],
+		health: [
+			{ name: "Allyson Kang", year: "2025", major: "Psychobiology", linkedin: "https://www.linkedin.com/in/allyson-kang/", image: "AllysonKang" }
+		]
+	},
+	{
+		cohort: "2023 Winter - Lambda",
+		management: [
+			{ name: "Nalin Jayaswal", year: "2026", major: "Economics, Climate Science", linkedin: "https://www.linkedin.com/in/nalinjayaswal/", image: "NalinJayaswal" },
+			{ name: "Junho Suh", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/junho-suh/", image: "JunhoSuh" },
+			{ name: "William Siyuan Li", year: "2026", major: "Economics, Cognitive Science", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADLZUA0B6HhYuow9NJh3LGAA_kIJawUD3M8&keywords=william%20siyuan%20li&origin=RICH_QUERY_SUGGESTION&position=0&searchId=03920d87-4258-4e49-ac2c-938365fad064&sid=*FX&spellCorrectionEnabled=false", image: "WilliamSiyuanLi" },
+			{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" },
+			{ name: "Christian Byun", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/christian-byun1/", image: "ChristianByun" },
+			{ name: "Brittany Ishida", year: "2026", major: "Business Economics", linkedin: "https://www.linkedin.com/in/brittany-ishida/", image: "BrittanyIshida" },
+			{ name: "Samantha Fong", year: "2025", major: "Psychology, Communications", linkedin: "https://www.linkedin.com/in/samantha-fong851/", image: "SamanthaFong" },
+			{ name: "Akash Kura", year: "2026", major: "Pre Cognitive Science", linkedin: "https://www.linkedin.com/in/akash-kura-39151a215/", image: "AkashKura" },
+			{ name: "Eden Tan", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/edenraetan/", image: "EdenTan" }
+		],
+		health: [
+			{ name: "Sarah Wang", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/sarah-wang-35269a1b0/", image: "SarahWang" },
+			{ name: "Joah Lee", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/jjoahlee/", image: "JoahLee" },
+			{ name: "Au Vo", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/au-vo/", image: "AuVo" },
+			{ name: "Sreeja Polkampally", year: "2025", major: "Computational and Systems Biology, Spanish", linkedin: "https://www.linkedin.com/in/sreeja-polkampally/", image: "SreejaPolkampally" },
+			{ name: "Ajeeth Iyer", year: "2026", major: "Neuroscience", linkedin: "https://www.linkedin.com/in/ajeethiyer/", image: "AjeethIyer" }
+		]
+	}
+];
 ---
 
 <Layout title="Our Team - Bruin Strategy Network" description="Meet the executive team leading BSN at UCLA">
@@ -53,7 +73,7 @@ const consultants = [
 			</div>
 
 			<!-- Team Grid -->
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 executive-grid">
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 executive-grid">
 				<!-- Aarushi Maheshwari -->
 				<div class="team-card group cursor-pointer">
 					<!-- Avatar with Overlay -->
@@ -71,7 +91,7 @@ const consultants = [
 						</a>
 						<!-- Info Overlay -->
 						<div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-							<p class="text-sm font-medium opacity-90">Economics & Political Science</p>
+							<p class="text-sm font-medium opacity-90">Economics and Political Science</p>
 							<p class="text-xs opacity-80 mt-1">Class of 2027</p>
 						</div>
 					</div>
@@ -180,8 +200,8 @@ const consultants = [
 							</svg>
 						</a>
 						<div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-							<p class="text-sm font-medium opacity-90">Economics & Data Science</p>
-							<p class="text-xs opacity-80 mt-1">Class of 2026</p>
+							<p class="text-sm font-medium opacity-90">Economics and Data Science</p>
+							<p class="text-xs opacity-80 mt-1">Class of 2027</p>
 						</div>
 					</div>
 					<div class="text-center space-y-1">
@@ -378,7 +398,7 @@ const consultants = [
 
 			<!-- Consultants Grid - 5 per row, executive style -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 consultant-grid">
-				{consultants.map((consultant) => (
+				{consultantCohorts.flatMap(cohort => [...cohort.management, ...cohort.health]).map((consultant) => (
 					<div class="team-card group cursor-pointer">
 						<!-- Avatar with Overlay -->
 						<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
@@ -399,8 +419,8 @@ const consultants = [
 							</a>
 							<!-- Info Overlay -->
 							<div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-								<p class="text-sm font-medium opacity-90">Major TBD</p>
-								<p class="text-xs opacity-80 mt-1">Class of TBD</p>
+								<p class="text-sm font-medium opacity-90">{consultant.major}</p>
+								<p class="text-xs opacity-80 mt-1">Class of {consultant.year}</p>
 							</div>
 						</div>
 						<!-- Name and Title -->
