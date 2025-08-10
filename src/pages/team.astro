@@ -6,7 +6,7 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 // Consultant data organized by cohort
 const consultantCohorts = [
 	{
-		cohort: "2022 Fall - Kappa",
+		cohort: "2022 Fall",
 		management: [
 			{ name: "Benjamin Kane", year: "2025", major: "Business Economics, Accounting", linkedin: "https://www.linkedin.com/in/ben-kane10/", image: "BenjaminKane" },
 			{ name: "Chidera Okonkwo", year: "2026", major: "Chemical Engineering, Data Science Minor", linkedin: "https://www.linkedin.com/in/chidera-okonkwo/", image: "ChideraOkonkwo" },
@@ -20,7 +20,7 @@ const consultantCohorts = [
 		]
 	},
 	{
-		cohort: "2023 Winter - Lambda",
+		cohort: "2023 Winter",
 		management: [
 			{ name: "Akash Kura", year: "2026", major: "Pre Cognitive Science", linkedin: "https://www.linkedin.com/in/akash-kura-39151a215/", image: "AkashKura" },
 			{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" },
@@ -41,7 +41,7 @@ const consultantCohorts = [
 		]
 	},
 	{
-		cohort: "2023 Fall - Mu",
+		cohort: "2023 Fall",
 		management: [
 			{ name: "Aarushi Maheshwari", year: "2027", major: "Economics and Political Science", linkedin: "https://www.linkedin.com/in/aarushi-maheshwari/", image: "Aarushi" },
 			{ name: "Amber Yu", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/amber-yu-a669811b2/", image: "AmberYu" },
@@ -62,7 +62,7 @@ const consultantCohorts = [
 		]
 	},
 	{
-		cohort: "2024 Winter - Xi",
+		cohort: "2024 Winter",
 		management: [
 			{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar" },
 			{ name: "Jodi Chung", year: "2027", major: "Communications & Political Science", linkedin: "https://www.linkedin.com/in/jodi-chung/", image: "JodiChung" },
@@ -468,11 +468,8 @@ const consultantCohorts = [
 		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl lg:text-5xl font-bold text-bsn-navy font-display mb-6">
-					Our Consultants
+					Consultants
 				</h2>
-				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-					Meet our talented consultants organized by their BSN joining cohorts
-				</p>
 			</div>
 
 			<!-- Consultants by Cohort -->
@@ -496,7 +493,7 @@ const consultantCohorts = [
 										<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
 											<img 
 												src={`${baseUrl}consultants/${consultant.image}.png`} 
-												alt={consultant.name} 
+												alt={consultant.name}
 												class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 											/>
 											<!-- Gradient Overlay -->
@@ -541,7 +538,7 @@ const consultantCohorts = [
 										<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
 											<img 
 												src={`${baseUrl}consultants/${consultant.image}.png`} 
-												alt={consultant.name} 
+												alt={consultant.name}
 												class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 											/>
 											<!-- Gradient Overlay -->
