@@ -172,58 +172,80 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 					Life at BSN
 				</h2>
 				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-					A glimpse into our most recent banquet! 
+					A glimpse into life in BSN!
 				</p>
 			</div>
 
-			<!-- Gallery Grid -->
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gallery-grid">
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_group_alc.JPG" alt="BSN Group Photo" loading="eager" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">[Placeholder caption]</p>
+			<!-- Image Carousel -->
+			<div class="carousel-container max-w-4xl mx-auto">
+				<!-- Main Carousel -->
+				<div class="relative overflow-hidden rounded-2xl shadow-2xl">
+					<div class="carousel-wrapper" id="carouselWrapper">
+						<div class="carousel-slide active relative">
+							<img src={`${baseUrl}lifeatBSN/2025winter.jpg`} alt="BSN Winter 2025" loading="eager" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Winter 2025 Memories</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<img src={`${baseUrl}lifeatBSN/everyonelaughing.jpg`} alt="BSN Team Laughing" loading="lazy" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Good times and great laughs!</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<img src={`${baseUrl}lifeatBSN/everyonesmiling.jpg`} alt="BSN Team Smiling" loading="lazy" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">The BSN family</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<img src={`${baseUrl}lifeatBSN/freshmen.jpg`} alt="BSN Freshmen" loading="lazy" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Welcome to the newest members!</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<img src={`${baseUrl}lifeatBSN/girls.jpg`} alt="BSN Girls" loading="lazy" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Amazing women of BSN</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<img src={`${baseUrl}lifeatBSN/guys.jpg`} alt="BSN Guys" loading="lazy" class="w-full h-96 md:h-[500px] object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">The guys of BSN</p>
+							</div>
+						</div>
 					</div>
+
+					<!-- Navigation Arrows -->
+					<button class="carousel-nav carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-bsn-navy rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110" onclick="previousSlide()">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+						</svg>
+					</button>
+					<button class="carousel-nav carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-bsn-navy rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110" onclick="nextSlide()">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+						</svg>
+					</button>
 				</div>
 
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_freshmen.jpeg" alt="BSN Freshmen" loading="eager" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">BSN's class of 2028 😇</p>
-					</div>
-				</div>
-
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_freshmen2.jpeg" alt="BSN Freshmen Event" loading="eager" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">[Placeholder caption]</p>
-					</div>
-				</div>
-
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_seniors.jpg" alt="BSN Seniors" loading="lazy" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">(A part of) Our amazing class of 2025! 🎓</p>
-					</div>
-				</div>
-
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_seniors2.JPG" alt="BSN Senior Event" loading="lazy" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">Banquet 🎉</p>
-					</div>
-				</div>
-
-				<div class="gallery-item relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-					<img src="/BSN_biglittle.JPG" alt="BSN Big Little" loading="lazy" decoding="async" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="font-semibold">The best BSN Fam 😉</p>
-					</div>
+				<!-- Carousel Indicators -->
+				<div class="flex justify-center mt-6 space-x-2">
+					<button class="carousel-indicator active w-3 h-3 rounded-full bg-bsn-navy transition-all duration-200" onclick="goToSlide(0)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(1)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(2)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(3)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(4)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(5)"></button>
 				</div>
 			</div>
 		</div>
@@ -324,6 +346,28 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 		</div>
 	</section>
 
+	<style>
+		.carousel-slide {
+			display: none;
+		}
+		
+		.carousel-slide.active {
+			display: block;
+		}
+		
+		.carousel-nav {
+			backdrop-filter: blur(10px);
+		}
+		
+		.carousel-indicator {
+			cursor: pointer;
+		}
+		
+		.carousel-indicator.active {
+			transform: scale(1.2);
+		}
+	</style>
+
 	<script>
 		import { gsap } from 'gsap';
 		import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -347,17 +391,76 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 			}
 		);
 
-		gsap.fromTo(".gallery-item", 
-			{ opacity: 0, y: 40, scale: 0.95 }, 
+		// Carousel functionality
+		let currentSlide = 0;
+		const totalSlides = 6;
+		
+		function updateCarousel() {
+			const slides = document.querySelectorAll('.carousel-slide');
+			const indicators = document.querySelectorAll('.carousel-indicator');
+			
+			slides.forEach((slide, index) => {
+				if (index === currentSlide) {
+					slide.classList.add('active');
+					slide.style.display = 'block';
+				} else {
+					slide.classList.remove('active');
+					slide.style.display = 'none';
+				}
+			});
+			
+			indicators.forEach((indicator, index) => {
+				if (index === currentSlide) {
+					indicator.classList.add('active');
+					indicator.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+					indicator.classList.add('bg-bsn-navy');
+				} else {
+					indicator.classList.remove('active', 'bg-bsn-navy');
+					indicator.classList.add('bg-gray-300', 'hover:bg-gray-400');
+				}
+			});
+		}
+		
+		function nextSlide() {
+			currentSlide = (currentSlide + 1) % totalSlides;
+			updateCarousel();
+		}
+		
+		function previousSlide() {
+			currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+			updateCarousel();
+		}
+		
+		function goToSlide(slideIndex) {
+			currentSlide = slideIndex;
+			updateCarousel();
+		}
+		
+		// Make functions globally available
+		window.nextSlide = nextSlide;
+		window.previousSlide = previousSlide;
+		window.goToSlide = goToSlide;
+		
+		// Initialize carousel
+		document.addEventListener('DOMContentLoaded', () => {
+			updateCarousel();
+			
+			// Auto-advance carousel every 5 seconds
+			setInterval(() => {
+				nextSlide();
+			}, 5000);
+		});
+		
+		// Carousel animations with GSAP
+		gsap.fromTo(".carousel-container", 
+			{ opacity: 0, y: 40 }, 
 			{
 				opacity: 1,
 				y: 0,
-				scale: 1,
-				duration: 0.6,
+				duration: 0.8,
 				ease: "power2.out",
-				stagger: 0.1,
 				scrollTrigger: {
-					trigger: ".gallery-grid",
+					trigger: ".carousel-container",
 					start: "top 80%",
 					end: "bottom 20%",
 					toggleActions: "play none none reverse"
