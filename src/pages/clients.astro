@@ -20,7 +20,7 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 				Partner With BSN
 			</h1>
 			<p class="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
-				We aim to provide high quality, pro-bono consulting services to help your business become more successful. All we ask for is a little bit of your time! Each engagement is composed of a highly motivated team of undergraduate business analysts who are mentored by MBA candidates and consultants from top firms. Through this team, we come up with sustainable solutions to help your business thrive.
+				BSN provides high-quality, pro-bono consulting to help your business grow. Each engagement is driven by motivated undergraduate analysts from diverse majors and skillsets, delivering practical, sustainable solutions tailored to your needs.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<a href="#contact" class="inline-block bg-white text-bsn-navy px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl">
@@ -49,25 +49,25 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 
 			<!-- Services Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 services-grid">
-				<!-- Market Research -->
+				<!-- 1. Industry Research -->
 				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
 					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
 					<div class="p-8">
 						<div class="flex items-start space-x-4">
 							<div class="flex-shrink-0">
 								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
 								</svg>
 							</div>
 							<div class="flex-1 min-w-0">
 								<h3 class="text-xl font-semibold text-bsn-navy font-display mb-3">
-									Market Research
+									Industry Research
 								</h3>
 								<p class="text-gray-600 text-sm leading-relaxed mb-4">
-									In-depth analysis to understand market dynamics and competitive positioning.
+									In-depth analysis to understand market dynamics and industry trends.
 								</p>
 								<div class="space-y-1 text-xs text-gray-500">
-									<div>• Competitive Analysis</div>
+									<div>• Market Analysis</div>
 									<div>• Data Visualization</div>
 									<div>• Consumer Insights</div>
 									<div>• Industry Profiling</div>
@@ -77,14 +77,42 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 					</div>
 				</div>
 
-				<!-- Market Entry & Expansion -->
+				<!-- 2. Competitor Analysis -->
 				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
 					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
 					<div class="p-8">
 						<div class="flex items-start space-x-4">
 							<div class="flex-shrink-0">
 								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l-1-3m1 3l-3-3m-7.5 0l3-3m-3 3l-1-3"></path>
+								</svg>
+							</div>
+							<div class="flex-1 min-w-0">
+								<h3 class="text-xl font-semibold text-bsn-navy font-display mb-3">
+									Competitor Analysis
+								</h3>
+								<p class="text-gray-600 text-sm leading-relaxed mb-4">
+									Comprehensive assessment of competitive landscape and positioning strategies.
+								</p>
+								<div class="space-y-1 text-xs text-gray-500">
+									<div>• Competitive Benchmarking</div>
+									<div>• SWOT Analysis</div>
+									<div>• Market Positioning</div>
+									<div>• Strategic Insights</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. Market Entry & Expansion -->
+				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
+					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
+					<div class="p-8">
+						<div class="flex items-start space-x-4">
+							<div class="flex-shrink-0">
+								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
 								</svg>
 							</div>
 							<div class="flex-1 min-w-0">
@@ -98,42 +126,14 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 									<div>• Go-to-Market Strategy</div>
 									<div>• Customer Acquisition</div>
 									<div>• Market Segmentation</div>
-									<div>• Funding Strategy</div>
+									<div>• Expansion Planning</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Impact & Sustainability -->
-				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
-					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
-					<div class="p-8">
-						<div class="flex items-start space-x-4">
-							<div class="flex-shrink-0">
-								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"></path>
-								</svg>
-							</div>
-							<div class="flex-1 min-w-0">
-								<h3 class="text-xl font-semibold text-bsn-navy font-display mb-3">
-									Impact & Sustainability
-								</h3>
-								<p class="text-gray-600 text-sm leading-relaxed mb-4">
-									Solutions focused on long-term value creation and social responsibility.
-								</p>
-								<div class="space-y-1 text-xs text-gray-500">
-									<div>• Economic Resilience</div>
-									<div>• ESG Strategy</div>
-									<div>• Diversity & Inclusion</div>
-									<div>• Risk Management</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Product Development -->
+				<!-- 4. Product Development -->
 				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
 					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
 					<div class="p-8">
@@ -154,14 +154,42 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 									<div>• Feasibility Analysis</div>
 									<div>• Product Positioning</div>
 									<div>• Launch Strategy</div>
-									<div>• UX Design</div>
+									<div>• User Experience Design</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Organizational Development -->
+				<!-- 5. Profitability -->
+				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
+					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
+					<div class="p-8">
+						<div class="flex items-start space-x-4">
+							<div class="flex-shrink-0">
+								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
+								</svg>
+							</div>
+							<div class="flex-1 min-w-0">
+								<h3 class="text-xl font-semibold text-bsn-navy font-display mb-3">
+									Profitability
+								</h3>
+								<p class="text-gray-600 text-sm leading-relaxed mb-4">
+									Data-driven strategies to maximize profitability and operational efficiency.
+								</p>
+								<div class="space-y-1 text-xs text-gray-500">
+									<div>• Cost Optimization</div>
+									<div>• Pricing Strategy</div>
+									<div>• Financial Analysis</div>
+									<div>• Revenue Enhancement</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6. Organizational Development -->
 				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
 					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
 					<div class="p-8">
@@ -176,41 +204,13 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 									Organizational Development
 								</h3>
 								<p class="text-gray-600 text-sm leading-relaxed mb-4">
-									Building stronger organizations through strategic alignment and culture.
+									Building stronger organizations through strategic alignment, culture, and change management.
 								</p>
 								<div class="space-y-1 text-xs text-gray-500">
-									<div>• Brand Strategy</div>
+									<div>• Change Management</div>
 									<div>• Talent Management</div>
 									<div>• Goal Alignment</div>
 									<div>• Cultural Transformation</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Financial Optimization -->
-				<div class="service-card bg-white border border-gray-200 hover:border-bsn-blue/30 transition-all duration-300 relative overflow-hidden">
-					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bsn-blue to-bsn-navy"></div>
-					<div class="p-8">
-						<div class="flex items-start space-x-4">
-							<div class="flex-shrink-0">
-								<svg class="w-8 h-8 text-bsn-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
-								</svg>
-							</div>
-							<div class="flex-1 min-w-0">
-								<h3 class="text-xl font-semibold text-bsn-navy font-display mb-3">
-									Financial Optimization
-								</h3>
-								<p class="text-gray-600 text-sm leading-relaxed mb-4">
-									Data-driven strategies to maximize profitability and operational efficiency.
-								</p>
-								<div class="space-y-1 text-xs text-gray-500">
-									<div>• Cost Optimization</div>
-									<div>• Pricing Strategy</div>
-									<div>• Financial Analysis</div>
-									<div>• Process Improvement</div>
 								</div>
 							</div>
 						</div>
