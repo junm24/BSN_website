@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Frequently Asked Questions - Bruin Strategy Network" description="Get answers to common questions about BSN recruitment, membership, and consulting services">
@@ -48,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="faq-content hidden">
 							<div class="px-6 pb-6">
 								<p class="text-gray-700 leading-relaxed">
-									We look for individuals who are passionate about learning and and creating change in various communities. Our members tend to have leadership, critical thinking skills, and a passion to learn and grow as well as a desire to take initiative in the community. Finally, we look for individuals who are enthusiastic about working on a team and connecting with our current members!
+									We look for individuals who are eager to tackle complex business challenges and are driven to create change. Our members demonstrate strong leadership, analytical thinking, and a willingness to learn quickly in fast-paced, client-focused environments. Above all, we value team players who bring enthusiasm, professionalism, and a collaborative spirit.
 								</p>
 							</div>
 						</div>
@@ -124,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="faq-content hidden">
 							<div class="px-6 pb-6">
 								<p class="text-gray-700 leading-relaxed">
-									In order to best understand our applicants, our recruitment process is divided into four parts: an application/resume drop, a group interview, a coffee chat round, and a final individual interview.
+									In order to best understand our applicants and assess their consulting abilities, our recruitment process consists of both behavioral and case components. Please refer to the 'For Students' section for a more detailed description of our recruitment process.
 								</p>
 							</div>
 						</div>
@@ -134,7 +136,7 @@ import Layout from '../layouts/Layout.astro';
 						<button class="faq-toggle w-full p-6 text-left hover:bg-gray-100 transition-colors duration-200" data-faq="1-3">
 							<div class="flex items-center justify-between">
 								<h3 class="text-lg font-semibold text-bsn-navy font-display pr-4">
-									How should I prepare for the interviews?
+									How should I prepare for case interviews?
 								</h3>
 								<div class="flex-shrink-0">
 									<svg class="faq-arrow w-6 h-6 text-bsn-blue transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="faq-content hidden">
 							<div class="px-6 pb-6">
 								<p class="text-gray-700 leading-relaxed">
-									While seemingly intimidating, case interviews let us best understand your business acumen and critical thinking. We understand that most of our applicants will have little to no experience with our case interviews and will therefore provide you with several case study materials before the interview. In the meantime, we encourage you to research casing online and to practice some math problems beforehand.
+									While seemingly intimidating, case interviews let us best understand your business acumen and critical thinking. We understand that most of our applicants will have little to no experience with case interviews and will therefore provide you with several case study materials before the interview. We also offer a Resume & Case Workshop to help you prepare - check our recruitment timeline for details. In the meantime, we encourage you to research casing online and practice some math problems beforehand.
 								</p>
 							</div>
 						</div>
@@ -168,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="faq-content hidden">
 							<div class="px-6 pb-6">
 								<p class="text-gray-700 leading-relaxed">
-									We require a CV and also short answers to our application question(s).
+									All we require is a resume. No additional application questions are needed.
 								</p>
 							</div>
 						</div>
@@ -263,10 +265,10 @@ import Layout from '../layouts/Layout.astro';
 				Can't find the answer you're looking for? Our recruitment team is here to help and would love to connect with you.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/students#contacts" class="inline-block bg-bsn-navy text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-bsn-dark-navy transform hover:scale-105 transition-all duration-300 shadow-lg">
+				<a href={`${baseUrl}students/`} class="inline-block bg-bsn-navy text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-bsn-dark-navy transform hover:scale-105 transition-all duration-300 shadow-lg">
 					Contact Recruitment Team
 				</a>
-				<a href="/students" class="inline-block border-2 border-bsn-navy text-bsn-navy px-8 py-4 rounded-lg text-lg font-semibold hover:bg-bsn-navy hover:text-white transition-all duration-300">
+				<a href={`${baseUrl}students/`} class="inline-block border-2 border-bsn-navy text-bsn-navy px-8 py-4 rounded-lg text-lg font-semibold hover:bg-bsn-navy hover:text-white transition-all duration-300">
 					Learn About Recruitment
 				</a>
 			</div>
