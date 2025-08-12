@@ -7,8 +7,8 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 const projectManagers = [
 	{ name: "Sydney Dang", year: "2027", major: "Molecular, Cell, and Developmental Biology", linkedin: "https://www.linkedin.com/in/sydney-dang/", image: "SydneyDang", track: "Health" },
 	{ name: "Zoe Shin", year: "2027", major: "Human Biology and Society", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADaFzVcBqfSsKUEaZwwM5rMOjzxHjFNYarw&keywords=zoe%20shin&origin=RICH_QUERY_SUGGESTION&position=0&searchId=eeb64542-c877-4c62-be5f-d7c7b5709c77&sid=(kI&spellCorrectionEnabled=false", image: "ZoeShin", track: "Health" },
-	{ name: "Harry Hu", year: "2027", major: "Economics and Data Science", linkedin: "https://www.linkedin.com/in/harry-y-hu-/", image: "Harry", track: "Management" },
 	{ name: "Anya Modi", year: "2027", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/anya-modi-912014245/", image: "AnyaModi", track: "Health" },
+	{ name: "Harry Hu", year: "2027", major: "Economics and Data Science", linkedin: "https://www.linkedin.com/in/harry-y-hu-/", image: "Harry", track: "Management" },
 	{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar", track: "Management" }
 ];
 
@@ -22,41 +22,70 @@ const projectAdvisors = [
 	{ name: "Ronald Wang", year: "2025", major: "Cognitive Science & Economics", linkedin: "https://www.linkedin.com/in/ronaldwang31/", image: "RonaldWang" }
 ];
 
-// Consultant data organized by cohort
+// Consultant data organized by cohort (reverse chronological order)
 const consultantCohorts = [
 	{
-		cohort: "2022 Fall",
+		cohort: "2025 Winter",
 		management: [
+			{ name: "Aaron Knibbe", year: "2028", major: "Business Economics and Accounting", linkedin: "https://www.linkedin.com/in/aaron-knibbe/", image: "AaronKnibbe" },
+			{ name: "Alain Izawa", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/alain-izawa/", image: "AlainIzawa" },
+			{ name: "Amanda Lee", year: "2028", major: "Psychology & Global Studies", linkedin: "https://www.linkedin.com/in/amandal35/", image: "AmandaLee" },
+			{ name: "Maxwell Rubenstein", year: "2028", major: "Mathematics Economics", linkedin: "https://www.linkedin.com/in/maxwell-rubenstein/", image: "MaxwellRubenstein" },
+			{ name: "Reese Morio", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/reesemorio/", image: "reese" },
+			{ name: "Vlad Plyushchenko", year: "2028", major: "Computer Science", linkedin: "https://www.linkedin.com/in/vladplyushchenko/", image: "VladPlyushchenko" },
 			{ name: "Benjamin Kane", year: "2025", major: "Business Economics, Accounting", linkedin: "https://www.linkedin.com/in/ben-kane10/", image: "BenjaminKane" },
 			{ name: "Chidera Okonkwo", year: "2026", major: "Chemical Engineering, Data Science Minor", linkedin: "https://www.linkedin.com/in/chidera-okonkwo/", image: "ChideraOkonkwo" },
 			{ name: "Khushi Patel", year: "2026", major: "Civil Engineering, Entrepreneurship Minor", linkedin: "https://www.linkedin.com/in/khushipatel22/", image: "KhushiPatel" },
 			{ name: "Sophie Tan", year: "2025", major: "History and Business Economics", linkedin: "https://www.linkedin.com/in/sophie-tan-042714233/", image: "SophieTan" },
-			{ name: "Tatiana Strauss", year: "2025", major: "Behavioral Economics, Strategic Management, and Organizational Effectiveness", linkedin: "https://www.linkedin.com/in/tatianastrauss/", image: "TatianaStrauss" },
+			{ name: "Tatiana Strauss", year: "2025", major: "Behavioral Economics, Strategic Management, and Organizational Effectiveness", linkedin: "https://www.linkedin.com/in/tatianastrauss/", image: "TatianaStrauss" }
 		],
 		health: [
+			{ name: "Arnav Kalapala", year: "2028", major: "Neuroscience", linkedin: "https://www.linkedin.com/in/arnav-kalapala/", image: "ArnavKalapala" },
+			{ name: "Haley Lee", year: "2028", major: "Molecular Cell and Developmental Biology", linkedin: "https://www.linkedin.com/in/haleylee5/", image: "HaleyLee" },
+			{ name: "Lauren Naseib", year: "2028", major: "TBD", linkedin: "https://www.linkedin.com/in/lauren-naseib-/", image: "lauren" },
+			{ name: "Richa Thakre", year: "2028", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/richa-thakre/", image: "RichaThakre" },
+			{ name: "Srinidhi Sampath", year: "2028", major: "Physiological Sciences", linkedin: "https://www.linkedin.com/in/srinidhisampath05/", image: "SrinidhiSampath" },
 			{ name: "Allyson Kang", year: "2025", major: "Psychobiology", linkedin: "https://www.linkedin.com/in/allyson-kang/", image: "AllysonKang" },
 			{ name: "Kyle Hardnett", year: "2025", major: "Human Biology and Society", linkedin: "#", image: "KyleHardnett" }
 		]
 	},
 	{
-		cohort: "2023 Winter",
+		cohort: "2024 Fall",
 		management: [
-			{ name: "Akash Kura", year: "2026", major: "Pre Cognitive Science", linkedin: "https://www.linkedin.com/in/akash-kura-39151a215/", image: "AkashKura" },
-			{ name: "Brittany Ishida", year: "2026", major: "Business Economics", linkedin: "https://www.linkedin.com/in/brittany-ishida/", image: "BrittanyIshida" },
-			{ name: "Christian Byun", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/christian-byun1/", image: "ChristianByun" },
-			{ name: "Eden Tan", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/edenraetan/", image: "EdenTan" },
-			{ name: "Junho Suh", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/junho-suh/", image: "JunhoSuh" },
-			{ name: "Nalin Jayaswal", year: "2026", major: "Economics, Climate Science", linkedin: "https://www.linkedin.com/in/nalinjayaswal/", image: "NalinJayaswal" },
-			{ name: "Samantha Fong", year: "2025", major: "Psychology, Communications", linkedin: "https://www.linkedin.com/in/samantha-fong851/", image: "SamanthaFong" },
-			{ name: "William Siyuan Li", year: "2026", major: "Economics, Cognitive Science", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADLZUA0B6HhYuow9NJh3LGAA_kIJawUD3M8&keywords=william%20siyuan%20li&origin=RICH_QUERY_SUGGESTION&position=0&searchId=03920d87-4258-4e49-ac2c-938365fad064&sid=*FX&spellCorrectionEnabled=false", image: "WilliamSiyuanLi" },
-			{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" }
+			{ name: "Alex Munzon", year: "2027", major: "Business Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/alexander-munzon/", image: "AlexMunzon" },
+			{ name: "Jaewook Cho", year: "2028", major: "Math & CS", linkedin: "https://www.linkedin.com/in/jaewook-cho/", image: "JaewookCho" },
+			{ name: "Jun Moon", year: "2028", major: "Statistics and Data Science", linkedin: "https://www.linkedin.com/in/junhmoon/", image: "Jun"},
+			{ name: "Paul Antoine Joly", year: "2028", major: "Political Science and Math/Economics", linkedin: "https://www.linkedin.com/in/paulantoinejoly/", image: "PaulAntoineJoly" },
+			{ name: "Renee Yan", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/reneeyan28/", image: "Renee"},
+			{ name: "Ryan Chao", year: "2028", major: "Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/ryan-chao06/", image: "RyanChao" },
+			{ name: "Sydney Lin", year: "2028", major: "Political Science and Economics", linkedin: "https://www.linkedin.com/in/sydney-anne-lin/", image: "Sydney"}
 		],
 		health: [
-			{ name: "Ajeeth Iyer", year: "2026", major: "Neuroscience", linkedin: "https://www.linkedin.com/in/ajeethiyer/", image: "AjeethIyer" },
-			{ name: "Au Vo", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/au-vo/", image: "AuVo" },
-			{ name: "Joah Lee", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/jjoahlee/", image: "JoahLee" },
-			{ name: "Sarah Wang", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/sarah-wang-35269a1b0/", image: "SarahWang" },
-			{ name: "Sreeja Polkampally", year: "2025", major: "Computational and Systems Biology, Spanish", linkedin: "https://www.linkedin.com/in/sreeja-polkampally/", image: "SreejaPolkampally" }
+			{ name: "Abigail Hsu", year: "2028", major: "Business Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/abigailhsu/", image: "AbigailHsu" },
+			{ name: "Hetvi Trivedi", year: "2027", major: "Biomedical Engineering", linkedin: "https://www.linkedin.com/in/hetvi-trivedi2026/", image: "hetvi" },
+			{ name: "Nishil Gandhi", year: "2027", major: "Psychobiology", linkedin: "https://www.linkedin.com/in/nishil-gandhi/", image: "NishilGandhi" },
+			{ name: "Shreya Lakkaraju", year: "2026", major: "Molecular Biology and Public Health", linkedin: "https://www.linkedin.com/in/shreyalakkaraju/", image: "ShreyaLakkaraju" },
+			{ name: "Zachary Pelikh", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/zachary-pelikh/", image: "ZacharyPelikh" }
+		]
+	},
+	{
+		cohort: "2024 Winter",
+		management: [
+			{ name: "Jodi Chung", year: "2027", major: "Communications & Political Science", linkedin: "https://www.linkedin.com/in/jodi-chung/", image: "JodiChung" },
+			{ name: "Noah Cylich", year: "2027", major: "Computer Science", linkedin: "https://www.linkedin.com/in/noahcylich/", image: "NoahCylich" },
+			{ name: "Saumil Sharma", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/saumil-sharma-35b2041a1/", image: "SaumilSharma" },
+			{ name: "Shaurya Jain", year: "2027", major: "Economics", linkedin: "https://www.linkedin.com/in/shauryajainn/", image: "ShauryaJain" },
+			{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar" }
+		],
+		health: [
+			{ name: "Anya Modi", year: "2027", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/anya-modi-912014245/", image: "AnyaModi" },
+			{ name: "Aravinth Ruppa", year: "2026", major: "Business Economics + Microbiology, Immunology, & Molecular Genetics", linkedin: "https://www.linkedin.com/in/aravinth-ruppa-b282381b7/", image: "AravinthRuppa" },
+			{ name: "Archi Patel", year: "2027", major: "Computational and Systems Biology; Minor: English", linkedin: "https://www.linkedin.com/in/archi-patel-69b8b0167/", image: "archi" },
+			{ name: "Diya Muchhala", year: "2027", major: "Microbiology, Immunology and Molecular Genetics Major", linkedin: "https://www.linkedin.com/in/diya-muchhala-b24863200/", image: "DiyaMuchhala" },
+			{ name: "Kaili Tam", year: "2026", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/kailitam/", image: "KailiTam" },
+			{ name: "Sarah Ben Makhlouf", year: "2027", major: "Microbiology, Immunology, and Molecular Genetics", linkedin: "https://www.linkedin.com/in/sarah-ben-makhlouf-b1a3352a9/", image: "SarahBenMakhlouf" },
+			{ name: "Sydney Dang", year: "2027", major: "Molecular, Cell, and Developmental Biology", linkedin: "https://www.linkedin.com/in/sydney-dang/", image: "SydneyDang" },
+			{ name: "Zoe Shin", year: "2027", major: "Human Biology and Society", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADaFzVcBqfSsKUEaZwwM5rMOjzxHjFNYarw&keywords=zoe%20shin&origin=RICH_QUERY_SUGGESTION&position=0&searchId=eeb64542-c877-4c62-be5f-d7c7b5709c77&sid=(kI&spellCorrectionEnabled=false", image: "ZoeShin" }
 		]
 	},
 	{
@@ -81,60 +110,24 @@ const consultantCohorts = [
 		]
 	},
 	{
-		cohort: "2024 Winter",
+		cohort: "2023 Winter",
 		management: [
-			{ name: "Jodi Chung", year: "2027", major: "Communications & Political Science", linkedin: "https://www.linkedin.com/in/jodi-chung/", image: "JodiChung" },
-			{ name: "Noah Cylich", year: "2027", major: "Computer Science", linkedin: "https://www.linkedin.com/in/noahcylich/", image: "NoahCylich" },
-			{ name: "Saumil Sharma", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/saumil-sharma-35b2041a1/", image: "SaumilSharma" },
-			{ name: "Shaurya Jain", year: "2027", major: "Economics", linkedin: "https://www.linkedin.com/in/shauryajainn/", image: "ShauryaJain" },
-			{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar" }
+			{ name: "Akash Kura", year: "2026", major: "Pre Cognitive Science", linkedin: "https://www.linkedin.com/in/akash-kura-39151a215/", image: "AkashKura" },
+			{ name: "Brittany Ishida", year: "2026", major: "Business Economics", linkedin: "https://www.linkedin.com/in/brittany-ishida/", image: "BrittanyIshida" },
+			{ name: "Christian Byun", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/christian-byun1/", image: "ChristianByun" },
+			{ name: "Eden Tan", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/edenraetan/", image: "EdenTan" },
+			{ name: "Junho Suh", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/junho-suh/", image: "JunhoSuh" },
+			{ name: "Nalin Jayaswal", year: "2026", major: "Economics, Climate Science", linkedin: "https://www.linkedin.com/in/nalinjayaswal/", image: "NalinJayaswal" },
+			{ name: "Samantha Fong", year: "2025", major: "Psychology, Communications", linkedin: "https://www.linkedin.com/in/samantha-fong851/", image: "SamanthaFong" },
+			{ name: "William Siyuan Li", year: "2026", major: "Economics, Cognitive Science", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADLZUA0B6HhYuow9NJh3LGAA_kIJawUD3M8&keywords=william%20siyuan%20li&origin=RICH_QUERY_SUGGESTION&position=0&searchId=03920d87-4258-4e49-ac2c-938365fad064&sid=*FX&spellCorrectionEnabled=false", image: "WilliamSiyuanLi" },
+			{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" }
 		],
 		health: [
-			{ name: "Anya Modi", year: "2027", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/anya-modi-912014245/", image: "AnyaModi" },
-			{ name: "Aravinth Ruppa", year: "2026", major: "Business Economics + Microbiology, Immunology, & Molecular Genetics", linkedin: "https://www.linkedin.com/in/aravinth-ruppa-b282381b7/", image: "AravinthRuppa" },
-			{ name: "Archi Patel", year: "2027", major: "Computational and Systems Biology; Minor: English", linkedin: "https://www.linkedin.com/in/archi-patel-69b8b0167/", image: "archi" },
-			{ name: "Diya Muchhala", year: "2027", major: "Microbiology, Immunology and Molecular Genetics Major", linkedin: "https://www.linkedin.com/in/diya-muchhala-b24863200/", image: "DiyaMuchhala" },
-			{ name: "Kaili Tam", year: "2026", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/kailitam/", image: "KailiTam" },
-			{ name: "Sarah Ben Makhlouf", year: "2027", major: "Microbiology, Immunology, and Molecular Genetics", linkedin: "https://www.linkedin.com/in/sarah-ben-makhlouf-b1a3352a9/", image: "SarahBenMakhlouf" },
-			{ name: "Sydney Dang", year: "2027", major: "Molecular, Cell, and Developmental Biology", linkedin: "https://www.linkedin.com/in/sydney-dang/", image: "SydneyDang" },
-			{ name: "Zoe Shin", year: "2027", major: "Human Biology and Society", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADaFzVcBqfSsKUEaZwwM5rMOjzxHjFNYarw&keywords=zoe%20shin&origin=RICH_QUERY_SUGGESTION&position=0&searchId=eeb64542-c877-4c62-be5f-d7c7b5709c77&sid=(kI&spellCorrectionEnabled=false", image: "ZoeShin" }
-		]
-	},
-	{
-		cohort: "2024 Fall",
-		management: [
-			{ name: "Alex Munzon", year: "2027", major: "Business Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/alexander-munzon/", image: "AlexMunzon" },
-			{ name: "Jaewook Cho", year: "2028", major: "Math & CS", linkedin: "https://www.linkedin.com/in/jaewook-cho/", image: "JaewookCho" },
-			{ name: "Jun Moon", year: "2028", major: "Statistics and Data Science", linkedin: "https://www.linkedin.com/in/junhmoon/", image: "Jun"},
-			{ name: "Paul Antoine Joly", year: "2028", major: "Political Science and Math/Economics", linkedin: "https://www.linkedin.com/in/paulantoinejoly/", image: "PaulAntoineJoly" },
-			{ name: "Renee Yan", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/reneeyan28/", image: "Renee"},
-			{ name: "Ryan Chao", year: "2028", major: "Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/ryan-chao06/", image: "RyanChao" },
-			{ name: "Sydney Lin", year: "2028", major: "Political Science and Economics", linkedin: "https://www.linkedin.com/in/sydney-anne-lin/", image: "Sydney"}
-		],
-		health: [
-			{ name: "Abigail Hsu", year: "2028", major: "Business Economics and Cognitive Science", linkedin: "https://www.linkedin.com/in/abigailhsu/", image: "AbigailHsu" },
-			{ name: "Hetvi Trivedi", year: "2027", major: "Biomedical Engineering", linkedin: "https://www.linkedin.com/in/hetvi-trivedi2026/", image: "hetvi" },
-			{ name: "Nishil Gandhi", year: "2027", major: "Psychobiology", linkedin: "https://www.linkedin.com/in/nishil-gandhi/", image: "NishilGandhi" },
-			{ name: "Shreya Lakkaraju", year: "2026", major: "Molecular Biology and Public Health", linkedin: "https://www.linkedin.com/in/shreyalakkaraju/", image: "ShreyaLakkaraju" },
-			{ name: "Zachary Pelikh", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/zachary-pelikh/", image: "ZacharyPelikh" }
-		]
-	},
-	{
-		cohort: "2025 Winter",
-		management: [
-			{ name: "Aaron Knibbe", year: "2028", major: "Business Economics and Accounting", linkedin: "https://www.linkedin.com/in/aaron-knibbe/", image: "AaronKnibbe" },
-			{ name: "Alain Izawa", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/alain-izawa/", image: "AlainIzawa" },
-			{ name: "Amanda Lee", year: "2028", major: "Psychology & Global Studies", linkedin: "https://www.linkedin.com/in/amandal35/", image: "AmandaLee" },
-			{ name: "Maxwell Rubenstein", year: "2028", major: "Mathematics Economics", linkedin: "https://www.linkedin.com/in/maxwell-rubenstein/", image: "MaxwellRubenstein" },
-			{ name: "Reese Morio", year: "2028", major: "Business Economics", linkedin: "https://www.linkedin.com/in/reesemorio/", image: "reese" },
-			{ name: "Vlad Plyushchenko", year: "2028", major: "Computer Science", linkedin: "https://www.linkedin.com/in/vladplyushchenko/", image: "VladPlyushchenko" }
-		],
-		health: [
-			{ name: "Arnav Kalapala", year: "2028", major: "Neuroscience", linkedin: "https://www.linkedin.com/in/arnav-kalapala/", image: "ArnavKalapala" },
-			{ name: "Haley Lee", year: "2028", major: "Molecular Cell and Developmental Biology", linkedin: "https://www.linkedin.com/in/haleylee5/", image: "HaleyLee" },
-			{ name: "Lauren Naseib", year: "2028", major: "TBD", linkedin: "https://www.linkedin.com/in/lauren-naseib-/", image: "lauren" },
-			{ name: "Richa Thakre", year: "2028", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/richa-thakre/", image: "RichaThakre" },
-			{ name: "Srinidhi Sampath", year: "2028", major: "Physiological Sciences", linkedin: "https://www.linkedin.com/in/srinidhisampath05/", image: "SrinidhiSampath" }
+			{ name: "Ajeeth Iyer", year: "2026", major: "Neuroscience", linkedin: "https://www.linkedin.com/in/ajeethiyer/", image: "AjeethIyer" },
+			{ name: "Au Vo", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/au-vo/", image: "AuVo" },
+			{ name: "Joah Lee", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/jjoahlee/", image: "JoahLee" },
+			{ name: "Sarah Wang", year: "2025", major: "Human Biology & Society", linkedin: "https://www.linkedin.com/in/sarah-wang-35269a1b0/", image: "SarahWang" },
+			{ name: "Sreeja Polkampally", year: "2025", major: "Computational and Systems Biology, Spanish", linkedin: "https://www.linkedin.com/in/sreeja-polkampally/", image: "SreejaPolkampally" }
 		]
 	}
 ];
