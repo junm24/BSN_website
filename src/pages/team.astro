@@ -3,6 +3,25 @@ import Layout from '../layouts/Layout.astro';
 
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 
+// Project Managers data
+const projectManagers = [
+	{ name: "Sydney Dang", year: "2027", major: "Molecular, Cell, and Developmental Biology", linkedin: "https://www.linkedin.com/in/sydney-dang/", image: "SydneyDang", track: "Health" },
+	{ name: "Zoe Shin", year: "2027", major: "Human Biology and Society", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADaFzVcBqfSsKUEaZwwM5rMOjzxHjFNYarw&keywords=zoe%20shin&origin=RICH_QUERY_SUGGESTION&position=0&searchId=eeb64542-c877-4c62-be5f-d7c7b5709c77&sid=(kI&spellCorrectionEnabled=false", image: "ZoeShin", track: "Health" },
+	{ name: "Harry Hu", year: "2027", major: "Economics and Data Science", linkedin: "https://www.linkedin.com/in/harry-y-hu-/", image: "Harry", track: "Management" },
+	{ name: "Anya Modi", year: "2027", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/anya-modi-912014245/", image: "AnyaModi", track: "Health" },
+	{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar", track: "Management" }
+];
+
+// Project Advisors data
+const projectAdvisors = [
+	{ name: "Aravinth Ruppa", year: "2026", major: "Business Economics + Microbiology, Immunology, & Molecular Genetics", linkedin: "https://www.linkedin.com/in/aravinth-ruppa-b282381b7/", image: "AravinthRuppa" },
+	{ name: "Archi Patel", year: "2027", major: "Computational and Systems Biology; Minor: English", linkedin: "https://www.linkedin.com/in/archi-patel-69b8b0167/", image: "archi" },
+	{ name: "Kaili Tam", year: "2026", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/kailitam/", image: "KailiTam" },
+	{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" },
+	{ name: "Tatiana Strauss", year: "2025", major: "Behavioral Economics, Strategic Management, and Organizational Effectiveness", linkedin: "https://www.linkedin.com/in/tatianastrauss/", image: "TatianaStrauss" },
+	{ name: "Ronald Wang", year: "2025", major: "Computer Science", linkedin: "#", image: "RonaldWang" }
+];
+
 // Consultant data organized by cohort
 const consultantCohorts = [
 	{
@@ -12,7 +31,6 @@ const consultantCohorts = [
 			{ name: "Chidera Okonkwo", year: "2026", major: "Chemical Engineering, Data Science Minor", linkedin: "https://www.linkedin.com/in/chidera-okonkwo/", image: "ChideraOkonkwo" },
 			{ name: "Khushi Patel", year: "2026", major: "Civil Engineering, Entrepreneurship Minor", linkedin: "https://www.linkedin.com/in/khushipatel22/", image: "KhushiPatel" },
 			{ name: "Sophie Tan", year: "2025", major: "History and Business Economics", linkedin: "https://www.linkedin.com/in/sophie-tan-042714233/", image: "SophieTan" },
-			{ name: "Tatiana Strauss", year: "2025", major: "Behavioral Economics, Strategic Management, and Organizational Effectiveness", linkedin: "https://www.linkedin.com/in/tatianastrauss/", image: "TatianaStrauss"}
 		],
 		health: [
 			{ name: "Allyson Kang", year: "2025", major: "Psychobiology", linkedin: "https://www.linkedin.com/in/allyson-kang/", image: "AllysonKang" },
@@ -23,7 +41,6 @@ const consultantCohorts = [
 		cohort: "2023 Winter",
 		management: [
 			{ name: "Akash Kura", year: "2026", major: "Pre Cognitive Science", linkedin: "https://www.linkedin.com/in/akash-kura-39151a215/", image: "AkashKura" },
-			{ name: "Anna Li", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/annali9381/", image: "AnnaLi" },
 			{ name: "Brittany Ishida", year: "2026", major: "Business Economics", linkedin: "https://www.linkedin.com/in/brittany-ishida/", image: "BrittanyIshida" },
 			{ name: "Christian Byun", year: "2026", major: "Business Economics, Stats and Data Science", linkedin: "https://www.linkedin.com/in/christian-byun1/", image: "ChristianByun" },
 			{ name: "Eden Tan", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/edenraetan/", image: "EdenTan" },
@@ -46,7 +63,6 @@ const consultantCohorts = [
 			{ name: "Aarushi Maheshwari", year: "2027", major: "Economics and Political Science", linkedin: "https://www.linkedin.com/in/aarushi-maheshwari/", image: "Aarushi" },
 			{ name: "Amber Yu", year: "2026", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/amber-yu-a669811b2/", image: "AmberYu" },
 			{ name: "Claire Li", year: "2027", major: "Computer Science and Engineering", linkedin: "https://www.linkedin.com/in/claire-m-li/", image: "ClaireLi" },
-			{ name: "Harry Hu", year: "2027", major: "Economics and Data Science", linkedin: "https://www.linkedin.com/in/harry-y-hu-/", image: "Harry" },
 			{ name: "Khush Parikh", year: "2027", major: "Linguistics & Computer Science", linkedin: "https://www.linkedin.com/in/khushparikh/", image: "KhushParikh" },
 			{ name: "Mark Lin", year: "2026", major: "Business Economics", linkedin: "https://www.linkedin.com/in/markjlin13/", image: "MarkLin" },
 			{ name: "Palak Parikh", year: "2026", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/palak-parikh-b3b7a7315/", image: "PalakParikh" },
@@ -64,21 +80,14 @@ const consultantCohorts = [
 	{
 		cohort: "2024 Winter",
 		management: [
-			{ name: "Akshay Gajjar", year: "2027", major: "Economics | Data Science Engineering", linkedin: "https://www.linkedin.com/in/akshay-gajjar22/", image: "AkshayGajjar" },
 			{ name: "Jodi Chung", year: "2027", major: "Communications & Political Science", linkedin: "https://www.linkedin.com/in/jodi-chung/", image: "JodiChung" },
 			{ name: "Noah Cylich", year: "2027", major: "Computer Science", linkedin: "https://www.linkedin.com/in/noahcylich/", image: "NoahCylich" },
 			{ name: "Saumil Sharma", year: "2026", major: "Economics", linkedin: "https://www.linkedin.com/in/saumil-sharma-35b2041a1/", image: "SaumilSharma" },
 			{ name: "Shaurya Jain", year: "2027", major: "Economics", linkedin: "https://www.linkedin.com/in/shauryajainn/", image: "ShauryaJain" }
 		],
 		health: [
-			{ name: "Anya Modi", year: "2027", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/anya-modi-912014245/", image: "AnyaModi" },
-			{ name: "Aravinth Ruppa", year: "2026", major: "Business Economics + Microbiology, Immunology, & Molecular Genetics", linkedin: "https://www.linkedin.com/in/aravinth-ruppa-b282381b7/", image: "AravinthRuppa" },
-			{ name: "Archi Patel", year: "2027", major: "Computational and Systems Biology; Minor: English", linkedin: "https://www.linkedin.com/in/archi-patel-69b8b0167/", image: "archi" },
 			{ name: "Diya Muchhala", year: "2027", major: "Microbiology, Immunology and Molecular Genetics Major", linkedin: "https://www.linkedin.com/in/diya-muchhala-b24863200/", image: "DiyaMuchhala" },
-			{ name: "Kaili Tam", year: "2026", major: "Computational and Systems Biology", linkedin: "https://www.linkedin.com/in/kailitam/", image: "KailiTam" },
 			{ name: "Sarah Ben Makhlouf", year: "2027", major: "Microbiology, Immunology, and Molecular Genetics", linkedin: "https://www.linkedin.com/in/sarah-ben-makhlouf-b1a3352a9/", image: "SarahBenMakhlouf" },
-			{ name: "Sydney Dang", year: "2027", major: "Molecular, Cell, and Developmental Biology", linkedin: "https://www.linkedin.com/in/sydney-dang/", image: "SydneyDang" },
-			{ name: "Zoe Shin", year: "2027", major: "Human Biology and Society", linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADaFzVcBqfSsKUEaZwwM5rMOjzxHjFNYarw&keywords=zoe%20shin&origin=RICH_QUERY_SUGGESTION&position=0&searchId=eeb64542-c877-4c62-be5f-d7c7b5709c77&sid=(kI&spellCorrectionEnabled=false", image: "ZoeShin" }
 		]
 	},
 	{
@@ -455,6 +464,108 @@ const consultantCohorts = [
 					</div>
 				</div>
 
+			</div>
+		</div>
+	</section>
+
+	<!-- Project Managers Section -->
+	<section class="py-20 bg-gray-50 relative overflow-hidden">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl lg:text-5xl font-bold text-bsn-navy font-display mb-6">
+					Project Managers
+				</h2>
+			</div>
+
+			<!-- Project Managers Grid -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
+				{projectManagers.map((manager) => (
+					<div class="team-card group cursor-pointer">
+						<!-- Avatar with Overlay -->
+						<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
+							<img 
+								src={`${baseUrl}consultants/${manager.image}.png`} 
+								alt={manager.name}
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+							/>
+							<!-- Gradient Overlay -->
+							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							<!-- LinkedIn Icon -->
+							<a href={manager.linkedin || "#"} target="_blank" rel="noopener noreferrer" 
+							   class="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
+							   aria-label={`${manager.name} LinkedIn`}>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+								</svg>
+							</a>
+							<!-- Info Overlay -->
+							<div class="absolute bottom-0 left-0 right-0 p-3 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+								<p class="text-xs font-medium opacity-90 leading-tight">{manager.major}</p>
+								<p class="text-xs opacity-80 mt-1">Class of {manager.year}</p>
+							</div>
+						</div>
+						<!-- Name and Title -->
+						<div class="text-center space-y-1">
+							<h5 class="text-sm font-bold text-bsn-navy font-display group-hover:text-bsn-blue transition-colors duration-200">
+								{manager.name}
+							</h5>
+							<p class="text-xs text-gray-600 font-medium">
+								Project Manager ({manager.track})
+							</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Project Advisors Section -->
+	<section class="py-20 bg-white relative overflow-hidden">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl lg:text-5xl font-bold text-bsn-navy font-display mb-6">
+					Project Advisors
+				</h2>
+			</div>
+
+			<!-- Project Advisors Grid -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+				{projectAdvisors.map((advisor) => (
+					<div class="team-card group cursor-pointer">
+						<!-- Avatar with Overlay -->
+						<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
+							<img 
+								src={`${baseUrl}consultants/${advisor.image}.png`} 
+								alt={advisor.name}
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+							/>
+							<!-- Gradient Overlay -->
+							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							<!-- LinkedIn Icon -->
+							<a href={advisor.linkedin || "#"} target="_blank" rel="noopener noreferrer" 
+							   class="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 
+							   aria-label={`${advisor.name} LinkedIn`}>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+								</svg>
+							</a>
+							<!-- Info Overlay -->
+							<div class="absolute bottom-0 left-0 right-0 p-3 text-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+								<p class="text-xs font-medium opacity-90 leading-tight">{advisor.major}</p>
+								<p class="text-xs opacity-80 mt-1">Class of {advisor.year}</p>
+							</div>
+						</div>
+						<!-- Name and Title -->
+						<div class="text-center space-y-1">
+							<h5 class="text-sm font-bold text-bsn-navy font-display group-hover:text-bsn-blue transition-colors duration-200">
+								{advisor.name}
+							</h5>
+							<p class="text-xs text-gray-600 font-medium">
+								Project Advisor
+							</p>
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	</section>
