@@ -56,13 +56,13 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<!-- Image -->
 				<div class="order-2 lg:order-1">
-					<div class="relative overflow-hidden rounded-lg shadow-2xl">
+					<div class="relative overflow-hidden rounded-lg shadow-2xl h-80 md:h-96 lg:h-[450px]">
 						<img 
 							src={`${baseUrl}lifeatBSN/everyonesmiling.jpg`} 
 							alt="BSN Team Photo"
 							loading="lazy"
 							decoding="async"
-							class="w-full h-96 md:h-[500px] lg:h-[600px] object-cover filter brightness-110"
+							class="w-full h-full object-cover object-center filter brightness-110"
 						>
 					</div>
 				</div>
