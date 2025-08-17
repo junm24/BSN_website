@@ -1,5 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import headshot images for executive board
+import AarushiImg from '../assets/headshots/Aarushi.jpg';
+import AashiImg from '../assets/headshots/Aashi.jpg';
+import EmilyImg from '../assets/headshots/Emily.jpg';
+import ArchiImg from '../assets/headshots/archi.jpg';
+import HarryImg from '../assets/headshots/Harry.jpg';
+import HetviImg from '../assets/headshots/hetvi.jpg';
+import LaurenImg from '../assets/headshots/lauren.jpg';
+import ReeseImg from '../assets/headshots/reese.jpg';
+import ReneeImg from '../assets/headshots/Renee.jpg';
+import JunImg from '../assets/headshots/Jun.jpg';
+import SydneyImg from '../assets/headshots/Sydney.jpg';
 
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 
@@ -201,7 +215,7 @@ const consultantCohorts = [
 				<div class="team-card group cursor-pointer">
 					<!-- Avatar with Overlay -->
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src={`${baseUrl}headshots/Aarushi.jpg`} alt="Aarushi Maheshwari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<Image src={AarushiImg} alt="Aarushi Maheshwari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" width={400} height={400} quality={80} />
 						<!-- Gradient Overlay -->
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<!-- LinkedIn Icon -->
@@ -232,7 +246,7 @@ const consultantCohorts = [
 				<!-- Aashi Jhawer -->
 				<div class="team-card group cursor-pointer">
 					<div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
-						<img src={`${baseUrl}headshots/Aashi.jpg`} alt="Aashi Jhawer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+						<Image src={AashiImg} alt="Aashi Jhawer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" width={400} height={400} quality={80} />
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<a href="https://www.linkedin.com/in/aashi-jhawer/" target="_blank" rel="noopener noreferrer" 
 						   class="absolute top-4 right-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-bsn-blue hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100" 

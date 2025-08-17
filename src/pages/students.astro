@@ -1,14 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
-const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
+// Import lifeatBSN images for carousel and backgrounds
+import FreshmenImg from '../assets/lifeatBSN/freshmen.jpg';
+import LifeBSN1Img from '../assets/lifeatBSN/lifebsn1.jpg';
+import LifeBSN2Img from '../assets/lifeatBSN/lifebsn2.jpg';
+import LifeBSN3Img from '../assets/lifeatBSN/lifebsn3.jpg';
+import GuysImg from '../assets/lifeatBSN/guys.jpg';
+import GirlsImg from '../assets/lifeatBSN/girls.jpg';
+import EveryoneSmilingImg from '../assets/lifeatBSN/everyonesmiling.jpg';
+import EveryoneLaughingImg from '../assets/lifeatBSN/everyonelaughing.jpg';
+import Winter2025Img from '../assets/lifeatBSN/2025winter.jpg';
+
+// Import recruitment contact headshots
+import LaurenImg from '../assets/headshots/lauren.jpg';
+import AarushiImg from '../assets/headshots/Aarushi.jpg';
+import AashiImg from '../assets/headshots/Aashi.jpg';
+
+// Note: baseUrl removed since we're now using Astro Image optimization
 ---
 
 <Layout title="Join Our Team - Bruin Strategy Network" description="Learn about BSN recruitment and how to join UCLA's premier consulting group">
 	<section class="relative py-32 bg-gradient-to-br from-bsn-blue to-bsn-navy overflow-hidden">
 		<!-- Background Pattern -->
 		<div class="absolute inset-0 opacity-100">
-			<img src={`${baseUrl}lifeatBSN/freshmen.jpg`} alt="BSN Students" class="w-full h-full object-cover">
+			<Image src={FreshmenImg} alt="BSN Students" class="w-full h-full object-cover" width={1920} height={1080} quality={80} />
 		</div>
 		<div class="absolute inset-0 bg-bsn-dark-navy/65"></div>
 		
@@ -182,63 +199,63 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 				<div class="relative overflow-hidden rounded-2xl shadow-2xl">
 					<div class="carousel-wrapper" id="carouselWrapper">
 						<div class="carousel-slide active relative">
-							<img src={`${baseUrl}lifeatBSN/2025winter.jpg`} alt="BSN Winter 2025" loading="eager" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="high">
+							<Image src={Winter2025Img} alt="BSN Winter 2025" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={85} loading="eager" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Winter 2025 Memories</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/everyonelaughing.jpg`} alt="BSN Team Laughing" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={EveryoneLaughingImg} alt="BSN Team Laughing" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Good times and great laughs!</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/everyonesmiling.jpg`} alt="BSN Team Smiling" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={EveryoneSmilingImg} alt="BSN Team Smiling" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">The BSN family</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/freshmen.jpg`} alt="BSN Freshmen" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={FreshmenImg} alt="BSN Freshmen" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Welcome to the newest members!</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/girls.jpg`} alt="BSN Girls" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={GirlsImg} alt="BSN Girls" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Amazing women of BSN</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/guys.jpg`} alt="BSN Guys" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={GuysImg} alt="BSN Guys" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">The guys of BSN</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/lifebsn1.jpg`} alt="BSN Life" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={LifeBSN1Img} alt="BSN Life" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">BSN community moments</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/lifebsn2.jpg`} alt="BSN Events" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={LifeBSN2Img} alt="BSN Events" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Creating lasting memories</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<img src={`${baseUrl}lifeatBSN/lifebsn3.jpg`} alt="BSN Team" loading="lazy" decoding="async" class="w-full h-96 md:h-[500px] object-cover" fetchpriority="low">
+							<Image src={LifeBSN3Img} alt="BSN Team" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
 								<p class="text-lg font-semibold">Together we achieve more</p>
@@ -557,7 +574,7 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 				<div class="bg-white rounded-xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
 					<!-- Photo -->
 					<div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
-						<img src={`${baseUrl}headshots/lauren.jpg`} alt="Lauren Naseib" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+						<Image src={LaurenImg} alt="Lauren Naseib" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" width={200} height={200} quality={80} />
 					</div>
 					<!-- Info -->
 					<h3 class="text-xl font-bold text-bsn-navy font-display mb-2">
@@ -586,7 +603,7 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 				<div class="bg-white rounded-xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
 					<!-- Photo -->
 					<div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
-						<img src={`${baseUrl}headshots/Aarushi.jpg`} alt="Aarushi Maheshwari" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+						<Image src={AarushiImg} alt="Aarushi Maheshwari" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" width={200} height={200} quality={80} />
 					</div>
 					<!-- Info -->
 					<h3 class="text-xl font-bold text-bsn-navy font-display mb-2">
@@ -615,7 +632,7 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 				<div class="bg-white rounded-xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
 					<!-- Photo -->
 					<div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
-						<img src={`${baseUrl}headshots/Aashi.jpg`} alt="Aashi Jhawer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+						<Image src={AashiImg} alt="Aashi Jhawer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" width={200} height={200} quality={80} />
 					</div>
 					<!-- Info -->
 					<h3 class="text-xl font-bold text-bsn-navy font-display mb-2">
