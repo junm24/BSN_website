@@ -33,8 +33,71 @@ const { title = siteData.name, description = `${siteData.tagline} - Professional
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
+		
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="UCLA consulting, Bruin Strategy Network, UCLA business consulting, student consulting, UCLA strategy consulting, management consulting UCLA, UCLA consulting club, business strategy UCLA" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="English" />
+		<meta name="author" content="Bruin Strategy Network" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(`${baseUrl}lifeatBSN/everyonesmiling.jpg`, Astro.site)} />
+		<meta property="og:site_name" content="Bruin Strategy Network" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(`${baseUrl}lifeatBSN/everyonesmiling.jpg`, Astro.site)} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={Astro.url} />
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Bruin Strategy Network",
+			"alternateName": "BSN",
+			"url": "https://bruinstrategy.org",
+			"logo": "https://bruinstrategy.org/bsn%20logo.png",
+			"description": "UCLA's premier consulting group providing professional consulting services and developing future business leaders",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Los Angeles",
+				"addressRegion": "CA",
+				"addressCountry": "US"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "general inquiry",
+				"email": "contact@bruinstrategy.org"
+			},
+			"sameAs": [
+				"https://instagram.com/bruinstrategy",
+				"https://linkedin.com/company/bruin-strategy"
+			],
+			"foundingLocation": {
+				"@type": "Place",
+				"name": "University of California, Los Angeles"
+			},
+			"parentOrganization": {
+				"@type": "EducationalOrganization",
+				"name": "University of California, Los Angeles",
+				"alternateName": "UCLA"
+			}
+		}
+		</script>
 		
 		<!-- Fonts with Preload -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">

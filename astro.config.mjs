@@ -5,8 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://bsn-website-tau.vercel.app',
-  // Remove base for Vercel deployment
+  site: 'https://bruinstrategy.org',
   server: {
     port: 3000,
     host: '127.0.0.1'
