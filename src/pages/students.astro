@@ -2,16 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
-// Import lifeatBSN images for carousel and backgrounds
+// Import new carousel images
+import CarouselImg1 from '../assets/lifeatBSN/IMG_0131.jpeg';
+import CarouselImg2 from '../assets/lifeatBSN/IMG_3929.jpeg';
+import CarouselImg3 from '../assets/lifeatBSN/IMG_5119.jpeg';
+import CarouselImg4 from '../assets/lifeatBSN/IMG_6722.jpg';
+import CarouselImg5 from '../assets/lifeatBSN/IMG_8522.jpeg';
+import CarouselImg6 from '../assets/lifeatBSN/IMG_8591.jpeg';
+import CarouselImg7 from '../assets/lifeatBSN/IMG_8592.jpeg';
+import CarouselImg8 from '../assets/lifeatBSN/IMG_8593.jpeg';
+import CarouselImg9 from '../assets/lifeatBSN/IMG_8599.jpeg';
+import CarouselImg10 from '../assets/lifeatBSN/IMG_8601.jpeg';
+import CarouselImg11 from '../assets/lifeatBSN/IMG_8602.jpeg';
+import CarouselImg12 from '../assets/lifeatBSN/IMG_8653.jpeg';
+
+// Import background image (keep using freshmen for header)
 import FreshmenImg from '../assets/lifeatBSN/freshmen.jpg';
-import LifeBSN1Img from '../assets/lifeatBSN/lifebsn1.jpg';
-import LifeBSN2Img from '../assets/lifeatBSN/lifebsn2.jpg';
-import LifeBSN3Img from '../assets/lifeatBSN/lifebsn3.jpg';
-import GuysImg from '../assets/lifeatBSN/guys.jpg';
-import GirlsImg from '../assets/lifeatBSN/girls.jpg';
-import EveryoneSmilingImg from '../assets/lifeatBSN/everyonesmiling.jpg';
-import EveryoneLaughingImg from '../assets/lifeatBSN/everyonelaughing.jpg';
-import Winter2025Img from '../assets/lifeatBSN/2025winter.jpg';
 
 // Import recruitment contact headshots
 import LaurenImg from '../assets/headshots/lauren.jpg';
@@ -199,66 +205,87 @@ import AashiImg from '../assets/headshots/Aashi.jpg';
 				<div class="relative overflow-hidden rounded-2xl shadow-2xl">
 					<div class="carousel-wrapper" id="carouselWrapper">
 						<div class="carousel-slide active relative">
-							<Image src={Winter2025Img} alt="BSN Winter 2025" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={85} loading="eager" />
+							<Image src={CarouselImg1} alt="BSN Life Moments" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={85} loading="eager" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Winter 2025 Memories</p>
+								<p class="text-lg font-semibold">Creating memories together</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={EveryoneLaughingImg} alt="BSN Team Laughing" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg2} alt="BSN Community" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Good times and great laughs!</p>
+								<p class="text-lg font-semibold">Building lasting connections</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={EveryoneSmilingImg} alt="BSN Team Smiling" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg3} alt="BSN Events" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">The BSN family</p>
+								<p class="text-lg font-semibold">Unforgettable experiences</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={FreshmenImg} alt="BSN Freshmen" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg4} alt="BSN Team Spirit" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Welcome to the newest members!</p>
+								<p class="text-lg font-semibold">Team spirit at its finest</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={GirlsImg} alt="BSN Girls" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg5} alt="BSN Collaboration" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Amazing women of BSN</p>
+								<p class="text-lg font-semibold">Collaboration and growth</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={GuysImg} alt="BSN Guys" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg6} alt="BSN Fun Times" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">The guys of BSN</p>
+								<p class="text-lg font-semibold">Good times and great laughs</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={LifeBSN1Img} alt="BSN Life" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg7} alt="BSN Excellence" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">BSN community moments</p>
+								<p class="text-lg font-semibold">Pursuing excellence together</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={LifeBSN2Img} alt="BSN Events" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg8} alt="BSN Innovation" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Creating lasting memories</p>
+								<p class="text-lg font-semibold">Innovation and creativity</p>
 							</div>
 						</div>
 						<div class="carousel-slide relative">
-							<Image src={LifeBSN3Img} alt="BSN Team" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<Image src={CarouselImg9} alt="BSN Achievements" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 							<div class="absolute bottom-6 left-6 right-6 text-white">
-								<p class="text-lg font-semibold">Together we achieve more</p>
+								<p class="text-lg font-semibold">Celebrating achievements</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<Image src={CarouselImg10} alt="BSN Growth" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Personal and professional growth</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<Image src={CarouselImg11} alt="BSN Leadership" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Developing future leaders</p>
+							</div>
+						</div>
+						<div class="carousel-slide relative">
+							<Image src={CarouselImg12} alt="BSN Community Impact" class="w-full h-96 md:h-[500px] object-cover" width={1200} height={500} quality={80} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+							<div class="absolute bottom-6 left-6 right-6 text-white">
+								<p class="text-lg font-semibold">Making a lasting impact</p>
 							</div>
 						</div>
 					</div>
@@ -287,6 +314,9 @@ import AashiImg from '../assets/headshots/Aashi.jpg';
 					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(6)"></button>
 					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(7)"></button>
 					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(8)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(9)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(10)"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" onclick="goToSlide(11)"></button>
 				</div>
 			</div>
 		</div>
@@ -721,7 +751,7 @@ import AashiImg from '../assets/headshots/Aashi.jpg';
 
 		// Carousel functionality
 		let currentSlide = 0;
-		const totalSlides = 9;
+		const totalSlides = 12;
 		
 		function updateCarousel() {
 			const slides = document.querySelectorAll('.carousel-slide');
